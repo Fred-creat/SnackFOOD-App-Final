@@ -5,8 +5,9 @@ import { useCart } from "./CartContext";
 export default function FloatingCart({ onPress }) {
   const { cart } = useCart();
   const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+  
+  // ✅ Cálculo temporário direto no FloatingCart para testar
   const totalPrice = cart.reduce((sum, item) => {
-    // Garante que o preço é número
     const price = typeof item.price === 'string' ? parseFloat(item.price.replace(',', '.')) : item.price;
     return sum + (price * item.qty);
   }, 0);
@@ -15,7 +16,7 @@ export default function FloatingCart({ onPress }) {
 
   return (
     <TouchableOpacity style={styles.fab} onPress={onPress}>
-      <Text style={styles.text}>🛒 {totalItems} | R$ {totalPrice.toFixed(2)}</Text>
+      <Text style={styles.text}>🛒 {totalItems} | R$ {totalPrice.toFixed(2).replace('.', ',')}</Text>
     </TouchableOpacity>
   );
 }
@@ -25,7 +26,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     bottom: 20,
     right: 20,
-    backgroundColor:  "#ff8c00",
+    backgroundColor: "#ff8c00",
     borderRadius: 30,
     paddingVertical: 12,
     paddingHorizontal: 20,

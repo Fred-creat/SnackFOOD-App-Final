@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center',
-    fontSize: 18,
+    fontSize: 24,
     fontWeight: '800',
     color: "#ff8c00",
     marginTop: 8,

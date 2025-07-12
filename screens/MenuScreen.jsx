@@ -426,7 +426,7 @@ const styles = StyleSheet.create({
   },
   menuText: {
     textAlign: "center",
-    fontSize: 25,
+    fontSize: 28,
     width: 120,
     height: 30,
     borderRadius: 10,
