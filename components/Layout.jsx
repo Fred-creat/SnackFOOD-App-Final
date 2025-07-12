@@ -13,7 +13,7 @@ export default function Layout({ children, showCart = true, onCartPress }) {
       <View style={styles.container}>
         {children}
         {showCart && <FloatingCart onPress={onCartPress} />}
-        <WhatsAppButton />
+        
       </View>
     </ImageBackground>
   );

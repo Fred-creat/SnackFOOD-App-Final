@@ -1,17 +1,21 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import Layout from '../components/Layout';
+import WhatsAppButton from '../components/WhatsAppButton'; // ✅ Importar o componente existente
 
 export default function HomeScreen({ navigation }) {
   return (
     <Layout onCartPress={() => navigation.navigate('Carrinho')}>
       <View style={styles.center}>
-        <Text style={styles.title}>Bem-vindo à Snack FooD!</Text>
+        <Text style={styles.title}>Bem-vindo à Snack Food!</Text>
         <Text style={styles.subtitle}>O melhor cardápio de bolos, doces e salgados para você!</Text>
         <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Menu')}>
           <Text style={styles.buttonText}>Ver Menu</Text>
         </TouchableOpacity>
       </View>
+      
+      {/* ✅ Usar o componente WhatsAppButton existente apenas aqui */}
+      <WhatsAppButton />
     </Layout>
   );
 }
@@ -21,7 +25,8 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'rgba(0, 0, 255, 0.6)',
+    backgroundColor: "rgba(255, 140, 0, 0.8)",
+    borderColor: "#ff8c00",
     maxHeight: 190,
     borderRadius: 10,
   },
@@ -33,7 +38,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   subtitle: {
-    fontSize: 22,
+    fontSize: 20,
     color: '#fff',
     marginBottom: 30,
     textAlign: 'center',
@@ -48,6 +53,6 @@ const styles = StyleSheet.create({
   buttonText: {
     color: '#fff',
     fontWeight: 'bold',
-    fontSize: 18,
+    fontSize: 20,
   },
 });

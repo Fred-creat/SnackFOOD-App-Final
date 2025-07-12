@@ -34,7 +34,7 @@ export default function WhatsAppButton() {
       onPress={openWhatsApp}
       activeOpacity={0.8}
     >
-      <Text style={styles.whatsappIcon}>📱</Text>
+      <Text style={styles.whatsappIcon}></Text>
       <Text style={styles.whatsappText}>Fale Conosco</Text>
     </TouchableOpacity>
   );
@@ -49,24 +49,27 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#25D366',
-    paddingVertical: 12,
-    paddingHorizontal: 16,
-    borderRadius: 25, // Mantém formato arredondado
-    elevation: 8,
+    paddingVertical: 10,
+    paddingHorizontal: 5,
+    borderRadius: 50, // Mantém formato arredondado
+    elevation: 4,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 3 },
     shadowOpacity: 0.25,
-    shadowRadius: 5,
+    shadowRadius: 10,
     zIndex: 9999,
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: '#fff',
-    minWidth: 140, // Largura mínima para o texto
+    minWidth: 5, // Largura mínima para o texto
   },
   whatsappIcon: {
     fontSize: 18,
     marginRight: 8,
   },
   whatsappText: {
+    textAlign: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
     color: '#fff',
     fontSize: 14,
     fontWeight: 'bold',

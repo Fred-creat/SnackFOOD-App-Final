@@ -221,7 +221,7 @@ const styles = StyleSheet.create({
   },
   backTop: {
     alignSelf: 'flex-start',
-    backgroundColor: '#2e7d32',
+    backgroundColor:  "#ff8c00",
     paddingVertical: 8,
     paddingHorizontal: 18,
     borderRadius: 8,
@@ -272,7 +272,7 @@ const styles = StyleSheet.create({
     margin: 5,
   },
   paymentButtonSelected: {
-    backgroundColor: '#2e7d32',
+    backgroundColor:  "#ff8c00",
   },
   paymentButtonText: {
     color: '#333',
@@ -308,15 +308,15 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 16,
     marginBottom: 4,
-    color: '#2e7d32',
+    color:  "#ff8c00",
   },
   pixKey: {
     fontSize: 18,
-    color: '#2e7d32',
+    color:  "#ff8c00",
     fontWeight: 'bold',
   },
   finishButton: {
-    backgroundColor: '#2e7d32',
+    backgroundColor:  "#ff8c00",
     padding: 14,
     borderRadius: 8,
     alignItems: 'center',

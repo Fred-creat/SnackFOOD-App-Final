@@ -112,6 +112,18 @@ const salgados = [
     price: "1,10", 
     image: require("../assets/images/kibe.png") 
   },
+   {
+    name: "Almofadinha de Calabresa",
+    price: "1,10 unid.",
+    image: require("../assets/images/almofadinha-calabresa.png"),
+  },
+  {
+    name: "Batata-Frita",
+    recheio: "(porção)", // ✅ Adicionado para informar que é uma porção
+    price: "15,00 porção.",
+    image: require("../assets/images/batata-frita.png"),
+  },
+   
   {
     name: "Enroladinho",
     price: "1,10 unid.",
@@ -253,6 +265,8 @@ export default function MenuScreen({ navigation }) {
     'pastel.png': require('../assets/images/pastel.png'),
     'bolinha-queijo.png': require('../assets/images/bolinha-queijo.png'),
     'kibe.png': require('../assets/images/kibe.png'),
+    'almofadinha-calabresa.png': require('../assets/images/almofadinha-calabresa.png'),
+    'batata-frita.png': require('../assets/images/batata-frita.png'),
     'enroladinho.png': require('../assets/images/enroladinho.png'),
     'camarao-empanado.png': require('../assets/images/camarao-empanado.png'),
   };
@@ -378,10 +392,13 @@ const styles = StyleSheet.create({
   menuItem: {
     alignItems: "center",
     justifyContent: "center",
-    textAlign: "center",
-    width: 130,
-    height: 80,
-    marginVertical: 5,
+    margin: 10,
+    backgroundColor: "rgba(255, 140, 0, 0.2)",
+    borderRadius: 10,
+    borderWidth: 2,
+    borderColor: "#ff8c00",
+    width: 150,
+    height: 90,
   },
   comboMenuItem: {
     backgroundColor: "rgba(255, 140, 0, 0.2)",
@@ -396,7 +413,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     textAlign: "center",
     fontSize: 40,
-    backgroundColor: "rgba(0, 0, 255, 0.30)",
+    backgroundColor: "rgba(255, 140, 0, 0.2)",
+     borderColor: "#ff8c00",
     borderRadius: 10,
   },
   menuText: {
@@ -407,7 +425,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     fontWeight: "bold",
     color: "#fff",
-    backgroundColor: "rgba(0, 0, 255, 0.6)",
+    backgroundColor: "#ff8c00",
   },
   comboMenuText: {
     backgroundColor: "#ff8c00",
@@ -481,7 +499,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   deliveryInfo: {
-    backgroundColor: "rgba(49, 211, 49, 0.1)",
+    backgroundColor: "rgba(49, 211, 49, 0.5)",
     margin: 20,
     padding: 15,
     borderRadius: 10,
@@ -489,7 +507,7 @@ const styles = StyleSheet.create({
     borderColor: "#228b22",
   },
   deliveryTitle: {
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: "bold",
     color: "#fff", // ✅ Mudado para branco
     marginBottom: 8,
@@ -498,6 +516,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: "#fff", // ✅ Mudado para branco
     marginVertical: 2,
+     fontWeight: "bold",
   },
   deliveryReminder: {
     backgroundColor: "rgba(255, 193, 7, 0.1)",
