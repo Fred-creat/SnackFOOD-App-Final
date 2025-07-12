@@ -89,6 +89,12 @@ const doces = [
     price: " 100,00 ",
     image: require("../assets/images/cerejinnha.png"),
   },
+
+  {
+    name: "Churros-14un",
+    price: "10,00",
+    image: require("../assets/images/churros.png"),
+  },
 ];
 
 const salgados = [
@@ -258,6 +264,7 @@ export default function MenuScreen({ navigation }) {
     'beijinhos.png': require('../assets/images/beijinhos.png'),
     'casadinho.png': require('../assets/images/casadinho.png'),
     'cajuzinho.png': require('../assets/images/cajuzinho.png'),
+    'churros.png': require('../assets/images/churros.png'),
     'moranguinho.png': require('../assets/images/moranguinho.png'),
     'uva-encapada.png': require('../assets/images/uva-encapada.png'),
     'cerejinnha.png': require('../assets/images/cerejinnha.png'),
@@ -519,7 +526,7 @@ const styles = StyleSheet.create({
      fontWeight: "bold",
   },
   deliveryReminder: {
-    backgroundColor: "rgba(255, 193, 7, 0.1)",
+    backgroundColor: "rgba(255, 193, 7, 0.3)",
     margin: 15,
     padding: 15,
     borderRadius: 10,
